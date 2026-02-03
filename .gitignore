@@ -205,3 +205,34 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (DO NOT COMMIT RAW DATA)
+data/raw/
+data/interim/
+data/external/
+
+# Model artifacts
+models/checkpoints/
+models/outputs/
+
+# Logs
+logs/
+*.log
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Virtual environments
+venv/
+.env/
+
