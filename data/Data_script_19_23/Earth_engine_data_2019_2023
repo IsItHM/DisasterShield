@@ -1,0 +1,36 @@
+// Define Bangladesh first
+var bangladesh = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017')
+  .filter(ee.Filter.eq('country_na', 'Bangladesh'));
+
+var years = [2019, 2020, 2021, 2022, 2023];
+
+years.forEach(function(year) {
+  var image = ee.ImageCollection('COPERNICUS/S2_SR')
+    .filterBounds(bangladesh)
+    .filterDate(year + '-06-01', year + '-09-30')
+    .select(['B2', 'B3', 'B4', 'B8'])
+    .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 50))
+    .median()
+    .clip(bangladesh);
+
+  var ndwi = image.normalizedDifference(['B3', 'B8']).rename('NDWI');
+  var waterMask = ndwi.gt(0);
+
+  Export.image.toDrive({
+    image: image,
+    description: 'Bangladesh_RGB_' + year,
+    scale: 500,
+    region: bangladesh,
+    maxPixels: 1e9,
+    fileFormat: 'GeoTIFF'
+  });
+
+  Export.image.toDrive({
+    image: waterMask,
+    description: 'Bangladesh_WaterMask_' + year,
+    scale: 500,
+    region: bangladesh,
+    maxPixels: 1e9,
+    fileFormat: 'GeoTIFF'
+  });
+});
