@@ -8,7 +8,7 @@ DisasterShield-X uses satellite data, hydrology records, and historical events t
 The system is designed to support **decision-making** for communities and planners.
 
 ## Project Structure
-'''
+```
 DisasterShield/
 ├── README.md # Project overview
 ├── data/
@@ -23,6 +23,6 @@ DisasterShield/
 │ └── 2010.pdf … 2021.pdf
 └── papers/
 └── knn_flood.pdf # Reference paper
-'''
+```
 ## License
 MIT License
