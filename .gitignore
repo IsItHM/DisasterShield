@@ -236,3 +236,7 @@ logs/
 venv/
 .env/
 
+# Ignore large data files
+data/Raw_data/
+*.tif
+*.aux.xml
