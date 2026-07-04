@@ -1,0 +1,68 @@
+{
+  "mode": "full",
+  "utc_timestamp": "20260701T224956Z",
+  "seed": 42,
+  "tensorflow_version": "2.21.0",
+  "gpu_used": false,
+  "data_dir": "d:\\Hamim\\DisasterShield\\data\\Raw_data",
+  "spatial": {
+    "crs": "EPSG:4326",
+    "center_lat_deg": 23.67959088939059,
+    "pixel_deg_x": 0.004491576420597608,
+    "pixel_deg_y": 0.004491576420597608,
+    "pixel_size_m_x": 458.15038180795995,
+    "pixel_size_m_y": 497.4582634914586
+  },
+  "patch_counts_per_year": {
+    "2019": 148,
+    "2020": 148,
+    "2021": 148,
+    "2022": 148,
+    "2023": 148
+  },
+  "n_train_patches_used": 444,
+  "n_val_patches": 148,
+  "n_test_patches": 148,
+  "water_fraction": {
+    "train": 0.11154862137528153,
+    "val": 0.12387827280405406,
+    "test": 0.0934547218116554
+  },
+  "water_weight": 7.964700663002489,
+  "epochs_requested": 60,
+  "epochs_run": 13,
+  "train_seconds": 208.66796684265137,
+  "inference_seconds_all_test_patches": 1.095059871673584,
+  "n_test_patches_inference": 148,
+  "final_train_iou": 0.5615782141685486,
+  "final_val_iou": 3.333264612592757e-05,
+  "best_val_iou": 0.0001419677137164399,
+  "train_val_gap": 0.5615448815224227,
+  "test_iou": 1.473620336867043e-09,
+  "test_f1": 2.880792937531851e-09,
+  "test_loss": 2.1272547245025635,
+  "worst_test_patches": [
+    {
+      "patch_index": 44,
+      "iou": 2.8184892889463106e-10,
+      "water_frac_true": 0.8662109375
+    },
+    {
+      "patch_index": 27,
+      "iou": 3.0998140101984455e-10,
+      "water_frac_true": 0.78759765625
+    },
+    {
+      "patch_index": 61,
+      "iou": 3.2701111827108857e-10,
+      "water_frac_true": 0.74658203125
+    }
+  ],
+  "output_files": {
+    "metrics_json": "d:\\Hamim\\DisasterShield\\results\\20260701T224956Z\\metrics.json",
+    "training_history_csv": "d:\\Hamim\\DisasterShield\\results\\20260701T224956Z\\training_history.csv",
+    "predictions_png": "d:\\Hamim\\DisasterShield\\results\\20260701T224956Z\\predictions.png",
+    "class_balance_png": "d:\\Hamim\\DisasterShield\\results\\20260701T224956Z\\class_balance.png",
+    "model_keras": "d:\\Hamim\\DisasterShield\\results\\20260701T224956Z\\disastershield_best.keras"
+  }
+}

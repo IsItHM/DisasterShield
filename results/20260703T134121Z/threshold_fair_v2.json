@@ -1,0 +1,64 @@
+{
+  "timestamp_utc": "20260703T134121Z",
+  "tag": "v2",
+  "seed": 42,
+  "unet_model": "d:\\Hamim\\DisasterShield\\results\\20260703T054304Z\\feni_unet_best.keras",
+  "metric": "global pixel-level water-class IoU/F1",
+  "prob_threshold_sweep": {
+    "start": 0.05,
+    "stop": 0.95,
+    "step": 0.05,
+    "selection": "max VAL IoU, decision = prob > t"
+  },
+  "norm_stats": "data/processed/norm_stats_v2.json",
+  "rows": [
+    {
+      "method": "U-Net @0.5",
+      "val_threshold": 0.5,
+      "val_IoU": 0.7054682383052481,
+      "val_F1": 0.8273015263025316,
+      "test_IoU": 0.7143510395902605,
+      "test_F1": 0.8333777891381541
+    },
+    {
+      "method": "U-Net @val-tuned",
+      "val_threshold": 0.65,
+      "val_IoU": 0.7117605180739739,
+      "val_F1": 0.8316122618306319,
+      "test_IoU": 0.7215540948343293,
+      "test_F1": 0.8382589858771987
+    },
+    {
+      "method": "logreg @0.5",
+      "val_threshold": 0.5,
+      "val_IoU": 0.5664489943843619,
+      "val_F1": 0.7232268607723548,
+      "test_IoU": 0.612796380372544,
+      "test_F1": 0.759917851788489
+    },
+    {
+      "method": "logreg @val-tuned",
+      "val_threshold": 0.5,
+      "val_IoU": 0.5664489943843619,
+      "val_F1": 0.7232268607723548,
+      "test_IoU": 0.612796380372544,
+      "test_F1": 0.759917851788489
+    },
+    {
+      "method": "A VVchange<-4dB",
+      "val_threshold": -4.0,
+      "val_IoU": 0.5755385213315625,
+      "val_F1": 0.7305927637301953,
+      "test_IoU": 0.5724440398598132,
+      "test_F1": 0.7280946416519548
+    },
+    {
+      "method": "B VVflood<-13dB",
+      "val_threshold": -13.0,
+      "val_IoU": 0.4708367232372993,
+      "val_F1": 0.6402297628263415,
+      "test_IoU": 0.5517683012060401,
+      "test_F1": 0.7111477928465695
+    }
+  ]
+}

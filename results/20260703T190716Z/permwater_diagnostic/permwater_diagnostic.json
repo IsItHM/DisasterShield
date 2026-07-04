@@ -1,0 +1,46 @@
+{
+  "timestamp_utc": "20260703T190716Z",
+  "seed": 42,
+  "model": "d:\\Hamim\\DisasterShield\\results\\20260703T054304Z\\feni_unet_best.keras",
+  "threshold": 0.65,
+  "permwater_proxy": "VV_pre (raw dB) < -16",
+  "confirm_fraction": 0.5,
+  "metric": "fraction of false-positive pixels (pred flood AND true non-flood) that fall inside the pre-flood permanent-water proxy",
+  "patches": [
+    129,
+    153,
+    178
+  ],
+  "records": [
+    {
+      "patch_index": 129,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.88818359375,
+      "fp_pixels": 3638,
+      "fp_in_permwater": 0,
+      "frac_fp_in_permwater": 0.0,
+      "permwater_frac_of_patch": 0.0,
+      "verdict": "NOT CONFIRMED"
+    },
+    {
+      "patch_index": 153,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.6806640625,
+      "fp_pixels": 2788,
+      "fp_in_permwater": 0,
+      "frac_fp_in_permwater": 0.0,
+      "permwater_frac_of_patch": 0.001220703125,
+      "verdict": "NOT CONFIRMED"
+    },
+    {
+      "patch_index": 178,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.7001953125,
+      "fp_pixels": 2868,
+      "fp_in_permwater": 0,
+      "frac_fp_in_permwater": 0.0,
+      "permwater_frac_of_patch": 0.0,
+      "verdict": "NOT CONFIRMED"
+    }
+  ]
+}

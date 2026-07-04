@@ -1,0 +1,66 @@
+{
+  "mode": "smoke",
+  "utc_timestamp": "20260701T223239Z",
+  "seed": 42,
+  "tensorflow_version": "2.21.0",
+  "gpu_used": false,
+  "data_dir": "d:\\Hamim\\DisasterShield\\data\\Raw_data",
+  "spatial": {
+    "crs": "EPSG:4326",
+    "center_lat_deg": 23.67959088939059,
+    "pixel_deg_x": 0.004491576420597608,
+    "pixel_deg_y": 0.004491576420597608,
+    "pixel_size_m_x": 458.15038180795995,
+    "pixel_size_m_y": 497.4582634914586
+  },
+  "patch_counts_per_year": {
+    "2019": 148,
+    "2020": 148,
+    "2021": 148,
+    "2022": 148,
+    "2023": 148
+  },
+  "n_train_patches_used": 200,
+  "n_val_patches": 148,
+  "n_test_patches": 148,
+  "water_fraction": {
+    "train": 0.1242138671875,
+    "val": 0.12387827280405406,
+    "test": 0.0934547218116554
+  },
+  "water_weight": 7.05063092102677,
+  "epochs_requested": 2,
+  "epochs_run": 2,
+  "train_seconds": 23.87319040298462,
+  "final_train_iou": 0.36045601963996887,
+  "final_val_iou": 0.0002086149324895814,
+  "best_val_iou": 0.026730503886938095,
+  "train_val_gap": 0.3602474047074793,
+  "test_iou": 0.017527813091874123,
+  "test_f1": 0.03436509519815445,
+  "test_loss": 2.066495656967163,
+  "worst_test_patches": [
+    {
+      "patch_index": 74,
+      "iou": 4.6232085045662466e-10,
+      "water_frac_true": 0.499267578125
+    },
+    {
+      "patch_index": 12,
+      "iou": 7.077140830094025e-10,
+      "water_frac_true": 0.31787109375
+    },
+    {
+      "patch_index": 15,
+      "iou": 7.142857137755101e-10,
+      "water_frac_true": 0.312744140625
+    }
+  ],
+  "output_files": {
+    "metrics_json": "d:\\Hamim\\DisasterShield\\results\\20260701T223239Z\\metrics.json",
+    "training_history_csv": "d:\\Hamim\\DisasterShield\\results\\20260701T223239Z\\training_history.csv",
+    "predictions_png": "d:\\Hamim\\DisasterShield\\results\\20260701T223239Z\\predictions.png",
+    "class_balance_png": "d:\\Hamim\\DisasterShield\\results\\20260701T223239Z\\class_balance.png",
+    "model_keras": "d:\\Hamim\\DisasterShield\\results\\20260701T223239Z\\disastershield_best.keras"
+  }
+}

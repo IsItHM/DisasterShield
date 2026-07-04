@@ -1,0 +1,101 @@
+{
+  "created_utc": "20260703T044156Z",
+  "tag": "v2",
+  "flood_input": "Feni_S1_Flood_18to26Aug2024_10m.tif",
+  "channels": [
+    "VV_flood",
+    "VH_flood",
+    "VV_pre",
+    "VH_pre"
+  ],
+  "units": "dB",
+  "patch": 64,
+  "stride": 64,
+  "min_valid": 0.5,
+  "seed": 42,
+  "grid": {
+    "width": 7793,
+    "height": 6684,
+    "crs": "EPSG:4326",
+    "bounds": [
+      90.8999846108839,
+      22.699978072058247,
+      91.60004171179826,
+      23.300412007963736
+    ]
+  },
+  "split_boundaries": {
+    "method": "longitude thirds by column (west60/mid20/east20)",
+    "col_west_mid": 4675.8,
+    "col_mid_east": 6234.400000000001,
+    "lon_west_mid": 91.32001887143251,
+    "lon_mid_east": 91.46003029161538,
+    "train_cols": [
+      0,
+      4675.8
+    ],
+    "val_cols": [
+      4675.8,
+      6234.400000000001
+    ],
+    "test_cols": [
+      6234.400000000001,
+      7793
+    ]
+  },
+  "skipped_straddle": 208,
+  "skipped_invalid_lt50pct": 0,
+  "splits": {
+    "train": {
+      "n_patches": 7592,
+      "X_shape": [
+        7592,
+        64,
+        64,
+        4
+      ],
+      "y_shape": [
+        7592,
+        64,
+        64
+      ],
+      "flood_pixel_fraction": 0.205694,
+      "flood_pixels": 6396438,
+      "total_pixels": 31096832
+    },
+    "val": {
+      "n_patches": 2392,
+      "X_shape": [
+        2392,
+        64,
+        64,
+        4
+      ],
+      "y_shape": [
+        2392,
+        64,
+        64
+      ],
+      "flood_pixel_fraction": 0.185595,
+      "flood_pixels": 1818388,
+      "total_pixels": 9797632
+    },
+    "test": {
+      "n_patches": 2392,
+      "X_shape": [
+        2392,
+        64,
+        64,
+        4
+      ],
+      "y_shape": [
+        2392,
+        64,
+        64
+      ],
+      "flood_pixel_fraction": 0.144772,
+      "flood_pixels": 1418420,
+      "total_pixels": 9797632
+    }
+  }
+}

@@ -240,3 +240,28 @@ venv/
 data/Raw_data/
 *.tif
 *.aux.xml
+
+# ============================================================
+# Phase 2 (DisasterShield-X) — see reports/REPO_CLEANUP.md
+# ============================================================
+# Virtual env (note: the generic `.venv` rule above does not match this name)
+.venv-dsx/
+
+# Large inputs — provenance documented in README, not committed.
+# (1.8 GB S1/S2 GeoTIFFs; 622 MB UNOSAT shapefiles; ~2.8 GB patch arrays;
+#  the small data/processed/*.json manifests + norm_stats are kept.)
+data/Feni_2024_10m/
+data/labels_unosat/
+data/processed/*.npy
+
+# Deprecated Phase-1 artifacts — purged from git history, retained on disk only
+outputs/
+data reports/
+
+# Model checkpoints: ignore ALL, keep ONLY the single release artifact
+results/**/*.keras
+!results/20260703T054304Z/feni_unet_best.keras
+
+# Regenerable demo intermediates (already embedded in demo/index.html)
+results/**/demo_build/*.png
+# (*.tif, *.log, __pycache__/ already ignored above)

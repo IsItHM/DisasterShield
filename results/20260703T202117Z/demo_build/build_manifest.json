@@ -1,0 +1,51 @@
+{
+  "timestamp_utc": "20260703T202117Z",
+  "seed": 42,
+  "model": "d:\\Hamim\\DisasterShield\\results\\20260703T054304Z\\feni_unet_best.keras",
+  "threshold": 0.65,
+  "tile": 64,
+  "stride": 32,
+  "scene": [
+    6684,
+    7793
+  ],
+  "overlay_grid": [
+    1287,
+    1500
+  ],
+  "predicted_flood_km2": 915.0372509976208,
+  "predicted_flood_pixels": 9985625,
+  "unosat_vector_km2": 905.53,
+  "label_raster_km2_check": 903.451397438805,
+  "diff_km2": 9.507250997620872,
+  "s2_valid_frac": 1.0,
+  "agreement_km2": {
+    "both_flood_TP": 780.7030861785038,
+    "model_only_FP": 134.33416481911718,
+    "unosat_only_FN": 122.74831126030165
+  },
+  "layers": [
+    "Sentinel-2 pre-flood (May 2024)",
+    "Agreement map (model vs UNOSAT)",
+    "DisasterShield-X predicted flood",
+    "UNOSAT observed flood extent"
+  ],
+  "info_panel_sources": {
+    "iou_f1": {
+      "file": "d:\\Hamim\\DisasterShield\\results\\20260703T165223Z\\threshold_fair_v3.csv",
+      "row": "U-Net v2 @val-tuned",
+      "test_IoU": 0.721554,
+      "test_F1": 0.838259
+    },
+    "baselines": {
+      "file": "d:\\Hamim\\DisasterShield\\results\\20260703T052548Z\\baseline_comparison.csv",
+      "A_test_IoU": 0.5724440398598132,
+      "B_test_IoU": 0.5517683012060401,
+      "C_test_IoU": 0.612796380372544
+    }
+  },
+  "html": "d:\\Hamim\\DisasterShield\\demo\\index.html",
+  "html_mb": 7.508658,
+  "geotiff": "d:\\Hamim\\DisasterShield\\results\\20260703T202117Z\\demo_build\\pred_prob_downsampled.tif",
+  "build_seconds": 468.7755994796753
+}

@@ -1,0 +1,46 @@
+{
+  "timestamp_utc": "20260703T052548Z",
+  "tag": "v2",
+  "seed": 42,
+  "nonfinite_handling": "mean-filled with train channel means (same as training)",
+  "metric": "global pixel-level water-class IoU/F1",
+  "logreg": {
+    "coef": [
+      -0.342677503824234,
+      -0.3005828261375427,
+      0.16287492215633392,
+      0.25271686911582947
+    ],
+    "intercept": -5.818121910095215,
+    "channels": [
+      "VV_flood",
+      "VH_flood",
+      "VV_pre",
+      "VH_pre"
+    ],
+    "n_sample": 500000
+  },
+  "rows": [
+    {
+      "method": "A_VVchange_delta<t",
+      "chosen_threshold": -4.0,
+      "val_IoU": 0.5755385213315625,
+      "test_IoU": 0.5724440398598132,
+      "test_F1": 0.7280946416519548
+    },
+    {
+      "method": "B_VVflood_abs<t",
+      "chosen_threshold": -13.0,
+      "val_IoU": 0.4708367232372993,
+      "test_IoU": 0.5517683012060401,
+      "test_F1": 0.7111477928465695
+    },
+    {
+      "method": "C_logreg_4ch",
+      "chosen_threshold": "NA(decision=0.5)",
+      "val_IoU": 0.5664489943843619,
+      "test_IoU": 0.612796380372544,
+      "test_F1": 0.759917851788489
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "channels": [
+    "VV_flood",
+    "VH_flood",
+    "VV_pre",
+    "VH_pre"
+  ],
+  "tag": "v2",
+  "seed": 42,
+  "computed_on": "train split only (nanmean/nanstd)",
+  "mean": [
+    -9.642767906188965,
+    -16.556365966796875,
+    -8.776595115661621,
+    -13.348251342773438
+  ],
+  "std": [
+    4.47520112991333,
+    5.331352710723877,
+    2.2285268306732178,
+    3.2924821376800537
+  ],
+  "nonfinite_pixels_filled_with_mean": true,
+  "n_nonfinite_train_channel_values": 22608
+}

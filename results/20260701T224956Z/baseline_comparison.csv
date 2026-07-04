@@ -1,0 +1,4 @@
+method,val_IoU,test_IoU,test_F1,threshold
+UNet_5ch,0.000141968,1e-09,3e-09,
+NDWI_threshold,0.999468,0.99896,0.999479,-0.0
+logistic_regression,0.981036,0.981409,0.990617,

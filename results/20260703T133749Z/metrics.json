@@ -1,0 +1,105 @@
+{
+  "mode": "smoke",
+  "phase": "phase2_feni",
+  "tag": "v3",
+  "utc_timestamp": "20260703T133749Z",
+  "seed": 42,
+  "tensorflow_version": "2.21.0",
+  "gpu_used": false,
+  "channels": [
+    "VV_flood",
+    "VH_flood",
+    "VV_pre",
+    "VH_pre",
+    "dVV",
+    "dVH"
+  ],
+  "input_shape": [
+    64,
+    64,
+    6
+  ],
+  "flood_input": "Feni_S1_Flood_18to26Aug2024_10m.tif",
+  "normalization": {
+    "channels": [
+      "VV_flood",
+      "VH_flood",
+      "VV_pre",
+      "VH_pre",
+      "dVV",
+      "dVH"
+    ],
+    "tag": "v3",
+    "seed": 42,
+    "computed_on": "train split only (nanmean/nanstd)",
+    "mean": [
+      -9.642767906188965,
+      -16.556365966796875,
+      -8.776595115661621,
+      -13.348251342773438,
+      -1.239065170288086,
+      -2.1535727977752686
+    ],
+    "std": [
+      4.47520112991333,
+      5.331352710723877,
+      2.2285268306732178,
+      3.2924821376800537,
+      3.586703300476074,
+      4.2915215492248535
+    ],
+    "nonfinite_pixels_filled_with_mean": true,
+    "n_nonfinite_train_channel_values": 33912
+  },
+  "n_train_patches_used": 200,
+  "n_val_patches": 2392,
+  "n_test_patches": 2392,
+  "flood_fraction": {
+    "train": 0.202669677734375,
+    "val": 0.18559464164402173,
+    "test": 0.14477171626776755
+  },
+  "water_weight": 3.93413721864516,
+  "epochs_requested": 2,
+  "epochs_run": 2,
+  "train_seconds": 72.81312465667725,
+  "seconds_per_epoch": 36.40656232833862,
+  "inference_seconds_all_test_patches": 17.63184905052185,
+  "n_test_patches_inference": 2392,
+  "final_train_iou": 0.5947105884552002,
+  "final_val_iou": 0.5722724199295044,
+  "best_val_iou": 0.5722724199295044,
+  "train_val_gap": 0.0224381685256958,
+  "test_iou": 0.5360705852508545,
+  "test_f1": 0.6457609534263611,
+  "test_loss": 1.565122127532959,
+  "worst_test_patches": [
+    {
+      "patch_index": 129,
+      "iou": 2.6939655165156345e-10,
+      "flood_frac_true": 0.0,
+      "pred_flood_frac": 0.90625
+    },
+    {
+      "patch_index": 388,
+      "iou": 3.32115576110224e-10,
+      "flood_frac_true": 0.0,
+      "pred_flood_frac": 0.735107421875
+    },
+    {
+      "patch_index": 14,
+      "iou": 3.3400133589378715e-10,
+      "flood_frac_true": 0.0,
+      "pred_flood_frac": 0.73095703125
+    }
+  ],
+  "known_label_noise": "v2 flood composite (Aug 18-26 2024) matches the UNOSAT S1_20240818_20240826 label window exactly, so the v1 composite-window caveat (v1 spans Aug 20-Sep 5, wider than the label) does NOT apply to this run. Residual negative-class noise: ~92.45% of pre-flood permanent water (VV<-16 dB, Step 2c) falls outside UNOSAT polygons, i.e. permanent open water is genuinely non-flood in the negatives.",
+  "output_files": {
+    "metrics_json": "d:\\Hamim\\DisasterShield\\results\\20260703T133749Z\\metrics.json",
+    "training_history_csv": "d:\\Hamim\\DisasterShield\\results\\20260703T133749Z\\training_history.csv",
+    "predictions_png": "d:\\Hamim\\DisasterShield\\results\\20260703T133749Z\\predictions.png",
+    "model_keras": "d:\\Hamim\\DisasterShield\\results\\20260703T133749Z\\feni_unet_best.keras",
+    "model_last_keras": "d:\\Hamim\\DisasterShield\\results\\20260703T133749Z\\feni_unet_last.keras",
+    "norm_stats_json": "d:\\Hamim\\DisasterShield\\data\\processed\\norm_stats_v3.json"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "20260702T203648Z",
+  "grid": {
+    "width": 7793,
+    "height": 6684,
+    "crs": "EPSG:4326",
+    "bounds": [
+      90.8999846108839,
+      22.699978072058247,
+      91.60004171179826,
+      23.300412007963736
+    ]
+  },
+  "label_source": "S1_20240818_20240826_FloodExtent_Bangladesh.shp",
+  "n_features_in_window": 1,
+  "label_raster": "d:\\Hamim\\DisasterShield\\data\\processed\\feni_flood_label_10m.tif",
+  "flood_pixel_fraction": 0.189296,
+  "flood_pixels": 9860152,
+  "total_pixels": 52088412,
+  "overlay_png": "d:\\Hamim\\DisasterShield\\results\\20260702T203648Z\\label_overlay_check.png",
+  "permanent_water": {
+    "proxy": "S1 pre-flood VV < -16 dB",
+    "perm_water_pixels": 1535641,
+    "perm_water_fraction_of_scene": 0.029481,
+    "perm_water_pixels_outside_UNOSAT": 1419706,
+    "fraction_perm_water_outside_UNOSAT": 0.924504
+  }
+}

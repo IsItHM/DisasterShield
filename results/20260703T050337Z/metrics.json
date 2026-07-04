@@ -1,0 +1,94 @@
+{
+  "mode": "smoke",
+  "phase": "phase2_feni",
+  "tag": "v2",
+  "utc_timestamp": "20260703T050337Z",
+  "seed": 42,
+  "tensorflow_version": "2.21.0",
+  "gpu_used": false,
+  "channels": [
+    "VV_flood",
+    "VH_flood",
+    "VV_pre",
+    "VH_pre"
+  ],
+  "input_shape": [
+    64,
+    64,
+    4
+  ],
+  "flood_input": "Feni_S1_Flood_18to26Aug2024_10m.tif",
+  "normalization": {
+    "channels": [
+      "VV_flood",
+      "VH_flood",
+      "VV_pre",
+      "VH_pre"
+    ],
+    "tag": "v2",
+    "seed": 42,
+    "computed_on": "train split only",
+    "mean": [
+      NaN,
+      NaN,
+      NaN,
+      NaN
+    ],
+    "std": [
+      NaN,
+      NaN,
+      NaN,
+      NaN
+    ]
+  },
+  "n_train_patches_used": 200,
+  "n_val_patches": 2392,
+  "n_test_patches": 2392,
+  "flood_fraction": {
+    "train": 0.202669677734375,
+    "val": 0.18559464164402173,
+    "test": 0.14477171626776755
+  },
+  "water_weight": 3.93413721864516,
+  "epochs_requested": 2,
+  "epochs_run": 2,
+  "train_seconds": 68.24912595748901,
+  "seconds_per_epoch": 34.12456297874451,
+  "inference_seconds_all_test_patches": 19.55562734603882,
+  "n_test_patches_inference": 2392,
+  "final_train_iou": 8.651830640804548e-11,
+  "final_val_iou": 0.0533333346247673,
+  "best_val_iou": 0.0533333346247673,
+  "train_val_gap": -0.053333334538249,
+  "test_iou": 0.13333334028720856,
+  "test_f1": 0.13333331048488617,
+  "test_loss": NaN,
+  "worst_test_patches": [
+    {
+      "patch_index": 2124,
+      "iou": 2.441406249403953e-10,
+      "flood_frac_true": 1.0,
+      "pred_flood_frac": 0.0
+    },
+    {
+      "patch_index": 2144,
+      "iou": 2.478314745358534e-10,
+      "flood_frac_true": 0.985107421875,
+      "pred_flood_frac": 0.0
+    },
+    {
+      "patch_index": 2122,
+      "iou": 2.51004016001254e-10,
+      "flood_frac_true": 0.97265625,
+      "pred_flood_frac": 0.0
+    }
+  ],
+  "known_label_noise": "v2 flood composite (Aug 18-26 2024) matches the UNOSAT S1_20240818_20240826 label window exactly, so the v1 composite-window caveat (v1 spans Aug 20-Sep 5, wider than the label) does NOT apply to this run. Residual negative-class noise: ~92.45% of pre-flood permanent water (VV<-16 dB, Step 2c) falls outside UNOSAT polygons, i.e. permanent open water is genuinely non-flood in the negatives.",
+  "output_files": {
+    "metrics_json": "d:\\Hamim\\DisasterShield\\results\\20260703T050337Z\\metrics.json",
+    "training_history_csv": "d:\\Hamim\\DisasterShield\\results\\20260703T050337Z\\training_history.csv",
+    "predictions_png": "d:\\Hamim\\DisasterShield\\results\\20260703T050337Z\\predictions.png",
+    "model_keras": "d:\\Hamim\\DisasterShield\\results\\20260703T050337Z\\feni_unet_best.keras",
+    "norm_stats_json": "d:\\Hamim\\DisasterShield\\data\\processed\\norm_stats_v2.json"
+  }
+}

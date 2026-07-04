@@ -1,0 +1,20 @@
+# DisasterShield-X — Phase 2 pipeline dependencies.
+# Python 3.12 (tested on 3.12.10), CPU TensorFlow. Pins match the .venv-dsx
+# environment used to produce everything under results/.
+# Trimmed to packages actually imported by scripts/ plus the runtime
+# engines geopandas/folium require (pyogrio, pyproj, pandas, branca).
+
+numpy==2.5.0
+scipy==1.18.0
+matplotlib==3.11.0
+scikit-learn==1.9.0
+tensorflow==2.21.0        # CPU build; no native-Windows GPU for TF >= 2.11
+rasterio==1.5.0
+geopandas==1.1.4
+shapely==2.1.2
+pyogrio==0.13.0
+pyproj==3.7.2
+pandas==3.0.3
+folium==0.20.0
+branca==0.8.2
+pillow==12.3.0

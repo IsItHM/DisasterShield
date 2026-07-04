@@ -1,0 +1,145 @@
+{
+  "timestamp_utc": "20260703T202033Z",
+  "seed": 42,
+  "model": "d:\\Hamim\\DisasterShield\\results\\20260703T054304Z\\feni_unet_best.keras",
+  "threshold": 0.65,
+  "recession_layer": "S1_20240828_20240904_FloodExtent_Bangladesh.shp",
+  "recession_raster": "d:\\Hamim\\DisasterShield\\data\\processed\\feni_flood_label_recession_10m.tif",
+  "recession_flood_frac_scene": 0.136626069537309,
+  "peak_flood_frac_scene": 0.18929646002646425,
+  "n_fp_patches": 14,
+  "fp_patch_selection": "true flood frac 0 AND pred flood frac > 0.5 @0.65",
+  "aggregate_frac_fp_in_recession": 0.0,
+  "per_patch_mean_frac": 0.0,
+  "per_patch_max_frac": 0.0,
+  "confirm_fraction": 0.25,
+  "verdict": "FPs consistent with soil-moisture / SAR change-detection ambiguity",
+  "records": [
+    {
+      "patch_index": 14,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.68505859375,
+      "fp_pixels": 2806,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 59,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.64111328125,
+      "fp_pixels": 2626,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 82,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.568115234375,
+      "fp_pixels": 2327,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 105,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.518798828125,
+      "fp_pixels": 2125,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 106,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.544677734375,
+      "fp_pixels": 2231,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 108,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.5205078125,
+      "fp_pixels": 2132,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 129,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.88818359375,
+      "fp_pixels": 3638,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 153,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.6806640625,
+      "fp_pixels": 2788,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 176,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.574951171875,
+      "fp_pixels": 2355,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 177,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.580810546875,
+      "fp_pixels": 2379,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 178,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.7001953125,
+      "fp_pixels": 2868,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 270,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.53125,
+      "fp_pixels": 2176,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 388,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.61328125,
+      "fp_pixels": 2512,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    },
+    {
+      "patch_index": 389,
+      "true_flood_frac": 0.0,
+      "pred_flood_frac_at_0.65": 0.534912109375,
+      "fp_pixels": 2191,
+      "fp_in_recession_flood": 0,
+      "frac_fp_in_recession": 0.0,
+      "recession_flood_frac_of_patch": 0.0
+    }
+  ]
+}
